@@ -14,6 +14,10 @@ RUN git clone --recurse-submodules \
       https://github.com/RobotResearchRepos/HKUST-Aerial-Robotics_MonoLaneMapping \
       /catkin_ws/src/MonoLaneMapping
 
+RUN git clone --recurse-submodules \
+      https://github.com/qiaozhijian/openlane_bag \
+      /catkin_ws/src/openlane_bag
+
 RUN . /opt/ros/$ROS_DISTRO/setup.sh \
  && apt-get update \
  && rosdep install -r -y \
